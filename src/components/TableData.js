@@ -13,7 +13,6 @@ function TableData() {
     function createData(name, calories, fat, carbs, protein) {
         return { name, calories, fat, carbs, protein };
     }
-
     const rows = [
         createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
         createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
@@ -24,17 +23,19 @@ function TableData() {
 
 
 
+
+
     return (
         <div className="table">
                     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Company Name</TableCell>
+            <TableCell align="right">Employees</TableCell>
+            <TableCell align="right">Industry</TableCell>
+            <TableCell align="right">Websites</TableCell>
+            <TableCell align="right">More</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
