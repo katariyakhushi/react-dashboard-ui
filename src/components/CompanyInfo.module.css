@@ -1,0 +1,47 @@
+/* CompanyInfo.module.css */
+
+/* Styles for the Paper component */
+.company-info-paper {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff; /* Background color */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Styles for the table */
+  .company-info-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Styles for table header */
+  .company-info-table th {
+    background-color: #f0f0f0; /* Header background color */
+    text-align: left;
+    padding: 12px;
+  }
+  
+  /* Styles for table rows */
+  .company-info-table tr {
+    border-bottom: 1px solid #e0e0e0; /* Row border */
+  }
+  
+  /* Styles for table cells */
+  .company-info-table td {
+    padding: 12px;
+  }
+  
+  /* Alternate row background color */
+  .company-info-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  /* Responsive table styles */
+  @media (max-width: 768px) {
+    .company-info-table {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,16 +1,20 @@
 import React from "react";
-import TableData from "./components/TableData";
-import Topbar from "./Topbar";
-
 import './App.css';
+
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import MainPage from "./components/MainPage";
+import CompanyInfo from "./components/CompanyInfo";
 
 function App() {
   return (
-   
-    <div className="App">
-      <Topbar/>
-      <TableData/>
-    </div>
+
+      <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/company" element={<CompanyInfo />} />
+      </Routes>
   );
 }
 
