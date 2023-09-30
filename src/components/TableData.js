@@ -8,6 +8,7 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
 
 function TableData() {
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ function TableData() {
     navigate(`/company?name=${name}&calories=${calories}&fat=${fat}&carbs=${carbs}&protein=${protein}`);
   };
 
-  function createData(name, calories, fat, carbs, protein, moreInfo) {
-    return { name, calories, fat, carbs, protein, moreInfo };
+  function createData(name, avatar,calories, fat, carbs, protein, moreInfo) {
+    return { name, calories,avatar, fat, carbs, protein, moreInfo };
   }
 
   const rows = [
@@ -32,9 +33,13 @@ function TableData() {
     <div className="table">
       <TableContainer component={Paper}>
         <Table>
+       
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.name}>
+                <TableCell>
+      <Avatar alt={row.name} src={row.avatar} />
+    </TableCell>
                 <TableCell>{row.name}</TableCell>
                 <TableCell>{row.calories}</TableCell>
                 <TableCell>{row.fat}</TableCell>
@@ -42,7 +47,7 @@ function TableData() {
                 <TableCell align="right"> {/* Align the button to the right */}
                   <Button
                     variant="contained"
-                    color="primary"
+                    color="warning"
                     onClick={() => {
                       handleButtonClick({
                         name: row.name,

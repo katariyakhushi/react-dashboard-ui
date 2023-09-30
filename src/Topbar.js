@@ -1,12 +1,13 @@
-// Topbar.js
 import React from "react";
 import "./Topbar.css"; // Import your CSS file
+import logo from './image/logo.jpeg'; // Import the logo image
 
 const Topbar = () => {
   return (
     <div className="topbar">
       <div className="left-section">
-        <div className="company-name">Company Name</div>
+        <img src={logo} alt="Company Logo" className="logo" width={100} height={50}/>
+        
       </div>
       <div className="right-section">
         <div className="search-bar">

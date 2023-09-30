@@ -1,0 +1,50 @@
+/* Footer.css */
+
+/* Style the footer background */
+.custom-footer {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style the logo */
+.custom-logo {
+  display: flex;
+  align-items: center;
+}
+
+.custom-logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Style the footer links */
+.custom-footer-links {
+  margin-bottom: 10px;
+}
+
+.custom-footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom-footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Style the social media icons */
+.custom-social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.custom-social-icons a:hover {
+  color: #007bff; /* Change to your preferred hover color */
+}
+
+/* Style the copyright text */
+.custom-copyright {
+  font-size: 14px;
+  opacity: 0.8;
+}
