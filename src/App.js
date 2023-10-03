@@ -6,6 +6,7 @@ import MainPage from "./components/MainPage";
 import CompanyInfo from "./components/CompanyInfo";
 import TableData from "./components/TableData"; 
 import MyFooter from "./components/MyFooter";
+import Signup from "./components/Signup"
 function App() {
   return (
     <Routes>
@@ -13,6 +14,7 @@ function App() {
       <Route path="/company" element={<CompanyInfo />} />
       <Route path="/" element={<TableData />} /> 
       <Route path="/MyFooter" element={<MyFooter />} />
+      <Route path="/Signup" element={<Signup />} />
     </Routes>
   );
 }

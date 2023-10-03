@@ -1,0 +1,4 @@
+.search-bar .form-control:focus {
+  border-color: #007BFF !important;
+  box-shadow: 0 0 0 0.2rem rgba(185, 106, 32, 0.25) !important;
+}

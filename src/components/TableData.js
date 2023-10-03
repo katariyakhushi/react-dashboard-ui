@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 
+import "./TableData.css";
 function TableData() {
   const navigate = useNavigate();
 
@@ -31,9 +32,17 @@ function TableData() {
 
   return (
     <div className="table">
+      <div className="search-bar">
+  <div className="input-group">
+    <div className="input-group-prepend">
+      </div>
+    <input type="text" className="form-control" placeholder="Search for companies...." />
+  </div>
+</div>
+
       <TableContainer component={Paper}>
         <Table>
-       
+        
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.name}>
@@ -45,30 +54,30 @@ function TableData() {
                 <TableCell>{row.fat}</TableCell>
                 <TableCell>{row.carbs}</TableCell>
                 <TableCell align="right"> {/* Align the button to the right */}
-                  <Button
-                    variant="contained"
-                    color="warning"
-                    onClick={() => {
-                      handleButtonClick({
-                        name: row.name,
-                        calories: row.calories,
-                        fat: row.fat,
-                        carbs: row.carbs,
-                        protein: row.protein,
-                      });
-                    }}
-                  >
-                    Go to Company Info
-                  </Button>
+                <Button
+  variant="contained"
+  color="warning"
+  onClick={() => {
+    handleButtonClick({
+      name: row.name,
+      calories: row.calories,
+      fat: row.fat,
+      carbs: row.carbs,
+      protein: row.protein,
+    });
+  }}
+  style={{ fontSize: '14px', height: '30px', width: '100px' }} // Adjust height and width here
+>
+  Company 
+</Button>
+
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-      <Typography variant="caption" color="textSecondary" align="center" style={{ marginTop: '16px' }}>
-        Click the "Go to Company Info" button to view details
-      </Typography>
+      
     </div>
   );
 }
