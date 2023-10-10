@@ -5,12 +5,13 @@ import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 
 import "./TableData.css";
+
 function TableData() {
   const navigate = useNavigate();
 
@@ -18,8 +19,8 @@ function TableData() {
     navigate(`/company?name=${name}&calories=${calories}&fat=${fat}&carbs=${carbs}&protein=${protein}`);
   };
 
-  function createData(name, avatar,calories, fat, carbs, protein, moreInfo) {
-    return { name, calories,avatar, fat, carbs, protein, moreInfo };
+  function createData(name, avatar, calories, fat, carbs, protein, moreInfo) {
+    return { name, calories, avatar, fat, carbs, protein, moreInfo };
   }
 
   const rows = [
@@ -31,54 +32,59 @@ function TableData() {
   ];
 
   return (
-    <div className="table">
-      <div className="search-bar">
-  <div className="input-group">
-    <div className="input-group-prepend">
-      </div>
-    <input type="text" className="form-control" placeholder="Search for companies...." />
-  </div>
-</div>
-
-      <TableContainer component={Paper}>
+      <div>
+        <div> <input type="text"  placeholder="Search for companies...."  className="search-bar"/>
+        </div>
+       
+      <div className="table-container">
+         
+       <TableContainer component={Paper}>
         <Table>
-        
+          <TableHead>
+            <TableCell>Avtar</TableCell>
+            <TableCell>Company Name</TableCell>
+            <TableCell>Employees</TableCell>
+            <TableCell>Industry</TableCell>
+            <TableCell>Website</TableCell>
+            <TableCell>More</TableCell>
+          </TableHead>
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.name}>
                 <TableCell>
-      <Avatar alt={row.name} src={row.avatar} />
-    </TableCell>
+                  <Avatar alt={row.name} src={row.avatar} />
+                </TableCell>
                 <TableCell>{row.name}</TableCell>
                 <TableCell>{row.calories}</TableCell>
                 <TableCell>{row.fat}</TableCell>
                 <TableCell>{row.carbs}</TableCell>
-                <TableCell align="right"> {/* Align the button to the right */}
-                <Button
-  variant="contained"
-  color="warning"
-  onClick={() => {
-    handleButtonClick({
-      name: row.name,
-      calories: row.calories,
-      fat: row.fat,
-      carbs: row.carbs,
-      protein: row.protein,
-    });
-  }}
-  style={{ fontSize: '14px', height: '30px', width: '100px' }} // Adjust height and width here
->
-  Company 
-</Button>
-
+                <TableCell align="right">
+                  <Button
+                    variant="contained"
+                    color="warning"
+                    onClick={() => {
+                      handleButtonClick({
+                        name: row.name,
+                        calories: row.calories,
+                        fat: row.fat,
+                        carbs: row.carbs,
+                        protein: row.protein,
+                      });
+                    }}
+                    style={{ fontSize: '14px', height: '25px', width: '80px', margin: '10px' }}
+                  >
+                    Company
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
-      </TableContainer>
       
+      </TableContainer>
     </div>
+  
+  </div>
   );
 }
 

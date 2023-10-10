@@ -7,7 +7,7 @@ import CompanyInfo from "./components/CompanyInfo";
 import TableData from "./components/TableData"; 
 import MyFooter from "./components/MyFooter";
 import Signup from "./components/Signup"
-import paggination from './components/paggination.1';
+
 function App() {
   return (
     <Routes>
