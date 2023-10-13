@@ -3,22 +3,22 @@
   background-color: #333;
   color: white;
   margin: 20 auto; 
-  max-width: 950px; 
+  max-width: auto; 
   max-height: 150px;
   padding: 5px 10px 5px 80px ; 
 }
 
 .logo-section{
-  margin:-15px 0px 100px 0px; 
-  padding: 0px 0px 50px 0px;
+  margin:0px 10px 100px 10px; 
+  padding: 50px 0px 0px 0px;
 }
 
 .contact-info {
-  margin: 0px 0px 100px 100px; 
-  padding: 0px 0px 30px 0px;;
+  margin: 0px 0px 100px 0%; 
+  padding: 0px 0px 10px 0px;;
 }
 
 .social-links {
-  margin:  0px 0px 10px 100px;
-  padding: 0px 0px 30px 0px;;
+  margin:  0px 0px 10px 10%;
+  padding: 0px 0px 0px 0px;;
 }

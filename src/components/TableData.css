@@ -1,8 +1,9 @@
 /* TableData.css */
 .table-container {
   margin: 0 auto; /* Center the container horizontally */
-  max-width: 900px; /* Set a maximum width for the container */
-  padding: 20px; /* Add space on the sides */
+  max-width: 90%; /* Set a maximum width for the container */
+  padding: 20px;
+
 }
 /* TableData.css */
 .search-bar {
@@ -14,3 +15,32 @@
   margin-left: 50px; 
   margin-right: 50px; 
 }
+
+.myComponentContainer {
+  max-width: 90%;
+  margin: 0 auto;
+
+  padding: 20px; /* Add some padding to separate content from the background */
+}
+
+.myComponentTitle {
+  border: 1px solid #02070b; /* Specify the border color here */
+  max-width: 90%;
+  border-radius: 16px;
+  padding: 5% 2% 5% 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 35px;
+}
+
+.myComponentButton {
+  background-color: #da571b; /* Specify the button background color here */
+  color: #fff; /* Specify the button text color here */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10%;
+  margin-left: 15px;
+}
+
+
