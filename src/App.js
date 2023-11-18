@@ -17,7 +17,9 @@ function App() {
       <Route path="/paggination" element={<paggination />} /> 
       <Route path="/MyFooter" element={<MyFooter />} />
       <Route path="/Signup" element={<Signup />} />
+      <Route path="/Tabledata" element={<TableData/>} />
     </Routes>
+    
   );
 }
 
