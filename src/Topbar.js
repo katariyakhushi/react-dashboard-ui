@@ -1,8 +1,9 @@
 import React from "react";
 import "./Topbar.css"; // Import your CSS file
 import logo from './image/logo.jpeg'; // Import the logo image
-import { Link } from 'react-router-dom'; 
 
+import {  Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 const Topbar = () => {
   return (
     <div >
@@ -11,21 +12,21 @@ const Topbar = () => {
         <img src={logo} alt="Company Logo" className="logo" width={100} height={100}/><br/>
       </div>
       <div className="right-section">
-      <div  >
       
-      <select className="dropdown">
+     <div className="d-grid gap-2 d-md-flex justify-content-md-end"> 
+     <select className="dropdown">
         <option value="" className="option"> option</option>
         <option value="option1" className="option">Option 1</option>
         <option value="option2"  className="option">Option 2</option>
         <option value="option3"  className="option">Option 3</option>
       </select>
-     </div>
-        <div className="sign-up-button">
-        <Link to="/Signup" > 
-          <button style={{ backgroundColor: 'orange', color: 'white', }}>Signup</button>
-        </Link>
-        </div>
-      
+      <Link to="/Login"><Button className="btn btn-warning" type="button">
+      Login
+      </Button></Link>
+      <Link to="/Signup"><Button className="btn btn-warning" type="button">
+      Signup 
+      </Button></Link>
+    </div>
       </div>
       
     </div>

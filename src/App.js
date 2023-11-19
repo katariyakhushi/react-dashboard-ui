@@ -7,7 +7,7 @@ import CompanyInfo from "./components/CompanyInfo";
 import TableData from "./components/TableData"; 
 import MyFooter from "./components/MyFooter";
 import Signup from "./components/Signup"
-
+import Login from "./Login";
 function App() {
   return (
     <Routes>
@@ -17,6 +17,7 @@ function App() {
       <Route path="/paggination" element={<paggination />} /> 
       <Route path="/MyFooter" element={<MyFooter />} />
       <Route path="/Signup" element={<Signup />} />
+      <Route path="/Login" element={<Login />} />
       <Route path="/Tabledata" element={<TableData/>} />
     </Routes>
     
