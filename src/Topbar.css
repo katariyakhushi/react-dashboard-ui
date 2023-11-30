@@ -35,7 +35,7 @@
 
 
 .sign-up-button button {
-  background-color: orange;
+  background-color: rgb(237, 135, 33);
   color: white;
   border: none;
   border-radius: 4px;
@@ -51,15 +51,17 @@
   margin-left: 0; /* Center the container horizontally */
   max-width: auto; /* Set a maximum width for the container */
   padding: 20px; /* Add space on the sides */
-  background-color: rgb(219, 200, 157);
+  background-color: rgb(240, 240, 238);
 }
 
 .dropdown{
- background-color:  #ebdec4;
+ background-color:  #191715;
   color: rgb(26, 16, 16);
    padding: 4px 2px; /* Adjust height and width by changing padding values */
   margin-right: 10px;
   align-items: center;
+  border-radius: 1em;
+
 }
 .option{
 

@@ -1,70 +1,65 @@
 import React from 'react';
-import Topbar from '../Topbar';
-import { useLocation} from 'react-router-dom';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import { Link } from 'react-router-dom'; 
-import styles from './CompanyInfo.module.css'; 
-
+import { Link, useLocation } from 'react-router-dom';
+import avtar from '../image/avtar.png';
 
 function CompanyInfo() {
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
+  // Getting the data in this component
+  const location = useLocation();
+  console.log("state location", location.state);
+  const userData = location.state;
 
- 
-  
+  // Data is in this component now, so we can use it our way
 
   return (
-    <div>
-      <Topbar />
-      <Paper elevation={3} className={styles['company-info-paper']}>
-        <Typography variant="h4" component="h1" align="center" gutterBottom>
-          Company Information
-        </Typography>
-        <TableContainer>
-          <Table className={styles['company-info-table']}>
-            <TableHead>
-              <TableRow>
-                <TableCell>Property</TableCell>
-                <TableCell>Value</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>{params.get('name')}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Calories</TableCell>
-                <TableCell>{params.get('calories')}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Fat</TableCell>
-                <TableCell>{params.get('fat')}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Carbs</TableCell>
-                <TableCell>{params.get('carbs')}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Protein</TableCell>
-                <TableCell>{params.get('protein')}</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <Link to="/" > 
-          <button style={{ backgroundColor: 'orange', color: 'white' }}>Go to TableData</button>
-        </Link>
-   
-      </Paper>
-    </div>
+  
+    <section className="vh-100" style={{ backgroundColor: "#f4f4f4" }}>
+      <div className="container h-100">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col-lg-4 col-xl-5">
+            <div className="card text-white" style={{ backgroundColor: "#eaeaea" }}>
+              <div className="card-body p-md-3">
+                <div className="row justify-content-center">
+                  <div className="col-md-10 col-lg-6 col-xl-12 order-2 order-lg-1">
+                    <form className="text-center">
+                      <div>
+                        <h1 className=" mt-4 mb-4 text-center text-dark">Company Information</h1>
+                        <div className='text-dark mb-3 mt-4'>
+                          ID:
+                          <input type="text" value={userData.id} />
+                        </div>
+                        <div className='text-dark mb-3'>
+                          Name:
+                          <input type="text" value={userData.name} />
+                        </div>
+                        <div className='text-dark mb-3'>
+                          Email:
+                          <input type="text" value={userData.email} />
+                        </div>
+                        <div className='text-dark mb-3'>
+                          City:
+                          <input type="text" value={userData.address.city} />
+                        </div>
+                        <div className='text-dark mb-3'>
+                          Phone:
+                          <input type="text" value={userData.phone} />
+                        </div>
+                        <div className='text-dark mb-3'>
+                          Website:
+                          <input type="text" value={userData.website} />
+                        </div>
+                        <Link to="/" className="btn btn-warning mt-3">
+                          Go to TableData
+                        </Link>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

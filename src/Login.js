@@ -1,43 +1,52 @@
 import React from "react";
-import loginimg from './image/login img.png'; // Import the logo image
+import avtar from './image/avtar.png'; // Import the logo image
+import {  Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
   return (
-    <section className="vh-100 d-flex align-items-center" style={{ backgroundColor: "#121212" }}>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-8 col-lg-6 col-xl-5">
-            <div className="card text-white bg-dark rounded-3">
-              <div className="card-body p-5">
-                <div className="text-center">
-                  <img src={loginimg} alt="Company Logo" className="logo mb-3" width={80} height={80} />
-                  <h1 className="fw-bold mb-4">Login</h1>
+    <section className="vh-100" style={{ backgroundColor: "#f4f4f4" }}>
+    <div className="container h-100">
+      <div className="row d-flex justify-content-center align-items-center h-100">
+        <div className="col-lg-12 col-xl-4">
+          <div className="card text-white" style={{ backgroundColor: "#eaeaea" }}>
+            <div className="card-body p-md-3">
+              <div className="row justify-content-center">
+                <div className="col-md-10 col-lg-6 col-xl-12 order-2 order-lg-1">
+                 
+                  <form className="mx-1 mx-md-4">
+                <div className="d-flex flex-row align-items-center mb-4 text-dark">
+                  <h1 className="fw-bold mb-4">Log In</h1>
                 </div>
                 <form>
-                  <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email Address</label>
-                    <input type="text" className="form-control" id="email" placeholder="Enter your Email address" />
+                  <div className="mb-3 text-dark">
+                    <label htmlFor="email" className="form-label">Email*</label>
+                    <input type="text" className="form-control" id="email" placeholder="Enter your Email " />
                   </div>
-                  <div className="mb-3">
+                  <div className="mb-3 text-dark">
                     <label htmlFor="password" className="form-label">Password</label>
                     <input type="password" className="form-control" id="password" placeholder="Enter your Password" />
-                    <a href="#" className="d-block mt-2 text-white">Forgot password?</a>
+                    <a href="#" className="d-block mt-2 text-dark">Forgot password?</a>
                   </div>
-                  <div className="text-center">   <button className="btn btn-warning btn-lg btn-block" type="submit">Login</button></div>
+                  <div className="text-center my-4 justify-content-center ">   
+                 
+                  <Link to="/Login"><Button className=" col-xl-12 btn btn-warning" type="button">
+                   Log In
+                  </Button></Link>
+                 
+                  </div>
                 
                 </form>
-                <div className="my-4 text-center">
-                  <div className="text-hr text-hr--center">
-                    <span className="text-hr__text">or login with</span>
-                    <hr className="hr-line mx-3" />
+             
+                  
+                  
+                
+                <p className="text-center text-dark">Don't have an account? <a href="/signup" className="text-warning">Create an Account</a></p>
+                </form>
                   </div>
-                  <div className="d-flex justify-content-center gap-3">
-                    <button type="button" className="btn btn-warning ">Facebook</button>
-                    <button type="button" className="btn btn-warning">Google</button>
-                  </div>
+                 
                 </div>
-                <p className="text-center text-white">Don't have an account? <a href="/signup" className="text-warning">Create an Account</a></p>
               </div>
             </div>
           </div>

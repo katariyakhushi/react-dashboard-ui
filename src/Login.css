@@ -1,6 +1,6 @@
 @mixin hr-line {
     flex: 1;
-    background: #c7c7c7;
+    background: #030303;
     content: "";
     height: 1px;
   }
@@ -13,7 +13,7 @@
     font-family: sans-serif;
     width: 100%;
     margin: 15px auto;
-    color: #444;
+    color: #0b0909;
   
     &__text {
       padding-right: $padding;

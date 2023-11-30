@@ -1,44 +1,47 @@
-import React from "react";
-import "./Topbar.css"; // Import your CSS file
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from 'react';
 import logo from './image/logo.jpeg'; // Import the logo image
-
-import {  Button } from 'react-bootstrap';
-import { Link } from "react-router-dom";
-const Topbar = () => {
+function CollapsibleExample() {
   return (
-    <div >
-    <div className="topbar">
-      <div className="left-section">
-        <img src={logo} alt="Company Logo" className="logo" width={100} height={100}/><br/>
-      </div>
-      <div className="right-section">
-      
-     <div className="d-grid gap-2 d-md-flex justify-content-md-end"> 
-     <select className="dropdown">
-        <option value="" className="option"> option</option>
-        <option value="option1" className="option">Option 1</option>
-        <option value="option2"  className="option">Option 2</option>
-        <option value="option3"  className="option">Option 3</option>
-      </select>
-      <Link to="/Login"><Button className="btn btn-warning" type="button">
-      Login
-      </Button></Link>
-      <Link to="/Signup"><Button className="btn btn-warning" type="button">
-      Signup 
-      </Button></Link>
-    </div>
-      </div>
-      
-    </div>
-    <div className="information">
-       <h1 style={{marginLeft :'60px', fontSize:'50px'}}><b>Find & Research Information Technology and Services Companies in Ivory Coast</b></h1>
-    <h6 style={{marginLeft :'60px',fontSize:'20px'}}>Get access to 6sense's database for more than 235 Information Technology and Services companies in Ivory Coast.</h6>
-    </div>
-   
-   
-    </div>
-   
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home" > <img
+              src={logo}
+              alt="Company Logo"
+              className="logo mr-3"
+              width={150}
+              height={60}
+            /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+          
+          <Nav.Link href="#features"></Nav.Link>
+            <NavDropdown title="More Information" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2"> Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="/Signup">Sign Up</Nav.Link>
+            <Nav.Link eventKey={2} href="/Login">
+              Log In
+            </Nav.Link>
+            <Nav.Link href="#rgner"></Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
-export default Topbar;
+export default CollapsibleExample;
